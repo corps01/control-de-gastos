@@ -1,4 +1,5 @@
 /expense-tracker/node_modules
+/json-server/node_modules
 /expense-tracker/.pnp
 .pnp.js
 
