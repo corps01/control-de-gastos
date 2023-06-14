@@ -31,7 +31,7 @@ export const Header = () => {
     <header>
       <Container fluid>
         <Row className="justify-content-center align-items-center">
-          <Col className="d-flex flex-row overflow-auto header shadow">
+          <Col className="d-flex flex-row overflow-auto header">
             {months.map((month, index) => (
               <div
                 className={`px-3 ${selectedMonth === month ? "bold" : "date"}`}

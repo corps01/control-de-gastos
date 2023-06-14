@@ -1,19 +1,32 @@
 .header {
   background-color: #6582f8;
   color: white;
-  justify-content: center;
   align-items: center;
-  padding: 15px 10px;
+  padding: 15px 0;
   flex-wrap: nowrap;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow-x: auto;
+  justify-content: start;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+@media (min-width: 992px) {
+  .header {
+    justify-content: center;
+  }
 }
 
 .header::-webkit-scrollbar {
   display: none;
+}
+
+.header > div {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 10px;
 }
 
 .bold {

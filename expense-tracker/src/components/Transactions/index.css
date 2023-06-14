@@ -1,3 +1,11 @@
+.transactions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
 .transaction {
   font-size: small;
   font-weight: 200;
@@ -51,4 +59,12 @@
 .icon.minus {
   background-color: #ff898d;
   box-shadow: 0px 1px 7px 1px #ff898d;
+}
+
+.fixed-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  z-index: 2;
 }

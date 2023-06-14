@@ -55,8 +55,6 @@ export const GlobalProvider = ({ children }) => {
         type: "SET_TRANSACTIONS",
         payload: jsonData,
       });
-
-      console.log(state);
     } catch (error) {
       console.error("Error fetching data:", error);
     }

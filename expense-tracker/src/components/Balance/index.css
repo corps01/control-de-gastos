@@ -1,4 +1,5 @@
 .balance {
+  transition: all 0.3s ease 0s;
   background-color: white;
   margin-top: 20px;
   padding: 15px;
@@ -55,6 +56,7 @@
   font-size: 13px;
   text-align: center;
   color: lightgray;
-  padding: -2%;
-  margin: -2%;
+  margin: 0px;
+  padding: 0;
+  cursor: pointer;
 }

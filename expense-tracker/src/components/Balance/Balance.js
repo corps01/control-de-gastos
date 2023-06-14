@@ -3,6 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import { IncomeExpenses } from "./IncomeExpenses";
 import { Analytics } from "./Analytics";
 import { Container } from "react-bootstrap";
+
 import "./index.css";
 
 //Money formatter function

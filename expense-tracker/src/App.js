@@ -1,13 +1,10 @@
 import React from "react";
 import { Header } from "./components/Header/Header";
 import { Balance } from "./components/Balance/Balance";
-import { TransactionList } from "./components/Transactions/TransactionList";
-import { AddTransaction } from "./components/Transactions/AddTransaction";
-
+import { Transactions } from "./components/Transactions/Transactions";
 import { GlobalProvider } from "./context/GlobalState";
-
-import "./App.css";
 import { Container } from "react-bootstrap";
+import "./App.css";
 
 function App() {
   return (
@@ -15,8 +12,7 @@ function App() {
       <Header />
       <Container className="px-3">
         <Balance />
-        <TransactionList />
-        <AddTransaction />
+        <Transactions />
       </Container>
     </GlobalProvider>
   );
