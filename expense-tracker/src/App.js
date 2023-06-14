@@ -1,8 +1,8 @@
 import React from "react";
 import { Header } from "./components/Header/Header";
 import { Balance } from "./components/Balance/Balance";
-import { TransactionList } from "./components/TransactionList";
-import { AddTransaction } from "./components/AddTransaction";
+import { TransactionList } from "./components/Transactions/TransactionList";
+import { AddTransaction } from "./components/Transactions/AddTransaction";
 
 import { GlobalProvider } from "./context/GlobalState";
 
