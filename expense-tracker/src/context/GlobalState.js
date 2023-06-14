@@ -77,13 +77,8 @@ export const GlobalProvider = ({ children }) => {
         `http://localhost:4000/${currentMonth}`,
         transaction
       );
-      const newTransaction = response.data;
 
       fetchData();
-      // dispatch({
-      //   type: "ADD_TRANSACTION",
-      //   payload: { [currentMonth]: newTransaction },
-      // });
     } catch (error) {
       console.error("Error adding transaction:", error);
     }
@@ -93,11 +88,6 @@ export const GlobalProvider = ({ children }) => {
   async function deleteTransaction(id, currentMonth) {
     try {
       await axios.delete(`http://localhost:4000/${currentMonth}/${id}`);
-
-      // dispatch({
-      //   type: "DELETE_TRANSACTION",
-      //   payload: { currentMonth, id },
-      // });
       fetchData();
     } catch (error) {
       console.error("Error deleting transaction:", error);

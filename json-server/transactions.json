@@ -5,9 +5,9 @@
   "Abril": [
     {
       "id": 92082999,
-      "text": "pip",
-      "amount": 333,
-      "date": 13
+      "text": "Leche",
+      "amount": -33,
+      "date": 12
     }
   ],
   "Mayo": [],
@@ -22,6 +22,12 @@
       "id": 78893210,
       "text": "Sueldo",
       "amount": 20000,
+      "date": 14
+    },
+    {
+      "id": 60115044,
+      "text": "sueldo",
+      "amount": 4444,
       "date": 14
     }
   ],
