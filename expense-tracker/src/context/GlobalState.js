@@ -29,8 +29,11 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   const fetchData = async () => {
+    console.log(process.env.REACT_APP_API_ENDPOINT);
     try {
-      const response = await axios.get("http://localhost:4000/db"); // Replace with your JSON server endpoint
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_ENDPOINT}/db`
+      ); // Replace with your JSON server endpoint
       const jsonData = response.data;
 
       dispatch({
@@ -55,7 +58,10 @@ export const GlobalProvider = ({ children }) => {
 
   async function addTransaction(transaction, currentMonth) {
     try {
-      await axios.post(`http://localhost:4000/${currentMonth}`, transaction);
+      await axios.post(
+        `${process.env.REACT_APP_API_ENDPOINT}/${currentMonth}`,
+        transaction
+      );
 
       fetchData();
     } catch (error) {
@@ -66,7 +72,9 @@ export const GlobalProvider = ({ children }) => {
   // Actions
   async function deleteTransaction(id, currentMonth) {
     try {
-      await axios.delete(`http://localhost:4000/${currentMonth}/${id}`);
+      await axios.delete(
+        `${process.env.REACT_APP_API_ENDPOINT}/${currentMonth}/${id}`
+      );
       fetchData();
     } catch (error) {
       console.error("Error deleting transaction:", error);
