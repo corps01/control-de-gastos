@@ -1,16 +1,18 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import "./index.css";
+import { Container } from "react-bootstrap";
 
 //Money formatter function
 function moneyFormatter(num) {
   let p = num.toFixed(2).split(".");
   return (
-    "$ " +
+    "$" +
     p[0]
       .split("")
       .reverse()
       .reduce(function (acc, num, i, orig) {
-        return num === "-" ? acc : num + (i && !(i % 3) ? "," : "") + acc;
+        return num === "-" ? acc : num + acc;
       }, "") +
     "." +
     p[1]
@@ -33,15 +35,24 @@ export const IncomeExpenses = () => {
     -1;
 
   return (
-    <div className="inc-exp-container">
-      <div>
-        <h4>Income</h4>
-        <p className="money plus">{moneyFormatter(income)}</p>
+    <Container className="inc-exp-container p-0 my-3">
+      <div className="money-container plus">
+        <p className="money-title">Income</p>
+        <p className="money">+{moneyFormatter(income)}</p>
       </div>
-      <div>
-        <h4>Expense</h4>
-        <p className="money minus">{moneyFormatter(expense)}</p>
+      <hr
+        style={{
+          color: "gray",
+          backgroundColor: "gray",
+          width: "2px",
+          margin: "0 10px",
+          height: "57px",
+        }}
+      />
+      <div className="money-container minus">
+        <p className="money-title">Expense</p>
+        <p className="money">-{moneyFormatter(expense)}</p>
       </div>
-    </div>
+    </Container>
   );
 };

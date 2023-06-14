@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { IncomeExpenses } from "./IncomeExpenses";
+import { Analytics } from "./Analytics";
 import { Container } from "react-bootstrap";
 import "./index.css";
 
@@ -8,13 +9,13 @@ import "./index.css";
 function moneyFormatter(num) {
   let p = num.toFixed(2).split(".");
   return (
-    "$ " +
+    "$" +
     (p[0].split("")[0] === "-" ? "-" : "") +
     p[0]
       .split("")
       .reverse()
       .reduce(function (acc, num, i, orig) {
-        return num === "-" ? acc : num + (i && !(i % 3) ? "," : "") + acc;
+        return num === "-" ? acc : num + (i && !(i % 3) ? "" : "") + acc;
       }, "") +
     "." +
     p[1]
@@ -31,10 +32,11 @@ export const Balance = () => {
   const total = amounts.reduce((acc, item) => (acc += item), 0);
 
   return (
-    <Container className="balance">
+    <Container className="balance rounded-4 shadow">
       <h4 className="title">Balance del mes</h4>
-      <h1>{moneyFormatter(total)}</h1>
+      <h1 className="month-balance">{moneyFormatter(total)}</h1>
       <IncomeExpenses />
+      <Analytics />
     </Container>
   );
 };

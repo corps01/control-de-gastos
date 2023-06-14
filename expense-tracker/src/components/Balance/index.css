@@ -1,5 +1,5 @@
 .balance {
-  background-color: red;
+  background-color: white;
   margin-top: 20px;
   padding: 15px;
   display: flex;
@@ -8,6 +8,53 @@
 }
 
 .title {
-  font-size: 10px;
+  font-size: 18px;
   font-weight: 700;
+}
+
+.month-balance {
+  color: #6582f8;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.inc-exp-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.money-container.plus {
+  color: #75d58e;
+}
+
+.money-container.minus {
+  color: #ff898d;
+}
+
+.money-container {
+  width: 48%;
+}
+
+.money-title {
+  padding: 0%;
+  margin: 0%;
+  font-size: small;
+}
+
+.money {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0%;
+}
+
+.analytics p {
+  font-size: 13px;
+  text-align: center;
+  color: lightgray;
+  padding: -2%;
+  margin: -2%;
 }
