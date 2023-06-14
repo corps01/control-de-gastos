@@ -60,3 +60,20 @@
   padding: 0;
   cursor: pointer;
 }
+
+.svg-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: svgAnimation 1s ease infinite alternate;
+  padding-top: 9px;
+}
+
+@keyframes svgAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-7px);
+  }
+}

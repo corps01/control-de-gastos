@@ -1,25 +1,7 @@
 import React, { createContext, useReducer, useEffect } from "react";
+import { getCurrentMonthEnEspanol } from "../util/getCurrentDate";
 import AppReducer from "./AppReducer";
 import axios from "axios";
-
-const getCurrentMonthEnEspanol = () => {
-  const month = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-  ];
-  const d = new Date();
-  return month[d.getMonth()];
-};
 
 const initialState = {
   currentMonth: getCurrentMonthEnEspanol(),
@@ -73,10 +55,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function addTransaction(transaction, currentMonth) {
     try {
-      const response = await axios.post(
-        `http://localhost:4000/${currentMonth}`,
-        transaction
-      );
+      await axios.post(`http://localhost:4000/${currentMonth}`, transaction);
 
       fetchData();
     } catch (error) {

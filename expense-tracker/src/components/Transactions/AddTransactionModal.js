@@ -5,11 +5,13 @@ import { Button, Modal, Form } from "react-bootstrap";
 export const AddTransactionModal = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
+  const [error, setError] = useState("");
 
   const [showModal, setShowModal] = useState(false);
 
   const handleCloseModal = () => {
     setShowModal(false);
+    setError("");
   };
 
   const handleShowModal = () => {
@@ -21,14 +23,21 @@ export const AddTransactionModal = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
+    if (text.trim() === "" || amount.trim() === "") {
+      setError("Porfavor Ingresa una descripción y cantidad.");
+      return;
+    }
+
     const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
       text,
       amount: +amount,
       date: new Date().getDate(),
     };
+
     setText("");
     setAmount(0);
+    setError("");
     handleCloseModal();
     addTransaction(newTransaction, currentMonth);
   };
@@ -65,6 +74,8 @@ export const AddTransactionModal = () => {
                 (Negativo - Gasto, Positivo - Ingreso)
               </Form.Text>
             </Form.Group>
+
+            {error && <div className="text-danger">{error}</div>}
           </Form>
         </Modal.Body>
         <Modal.Footer>

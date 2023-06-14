@@ -18,6 +18,7 @@ code {
 * {
   font-family: "PT Sans", sans-serif;
   scrollbar-width: none;
+  transition: all 0.3s ease;
 }
 
 html,

@@ -11,6 +11,7 @@
   border-bottom-left-radius: 10px;
   overflow-x: auto;
   white-space: nowrap;
+  min-height: 60px;
 }
 
 @media (min-width: 992px) {
