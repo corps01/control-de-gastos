@@ -5,7 +5,7 @@ export const AddTransaction = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
 
-  const { addTransaction } = useContext(GlobalContext);
+  const { addTransaction, currentMonth } = useContext(GlobalContext);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -14,9 +14,10 @@ export const AddTransaction = () => {
       id: Math.floor(Math.random() * 100000000),
       text,
       amount: +amount,
+      date: new Date().getDate(),
     };
 
-    addTransaction(newTransaction);
+    addTransaction(newTransaction, currentMonth);
   };
 
   return (

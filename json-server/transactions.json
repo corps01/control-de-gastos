@@ -1,38 +1,40 @@
 {
-  "Enero": [
+  "Enero": [],
+  "Febrero": [],
+  "Marzo": [],
+  "Abril": [
     {
-      "id": 1,
-      "text": "Flor",
-      "amount": -20
-    },
-    {
-      "id": 3,
-      "text": "Salario",
-      "amount": 1200
-    },
-    {
-      "id": 88,
-      "text": "Flor",
-      "amount": -20
+      "id": 92082999,
+      "text": "pip",
+      "amount": 333,
+      "date": 13
     }
   ],
-  "Febrero": [
+  "Mayo": [],
+  "Junio": [
     {
-      "id": 2,
-      "text": "Prestamo",
-      "amount": 100
+      "id": 75356303,
+      "text": "Estoy en junio",
+      "amount": 44444,
+      "date": 13
     },
     {
-      "id": 3,
-      "text": "Salario",
-      "amount": 1200
+      "id": 52554961,
+      "text": "aaa",
+      "amount": 3,
+      "date": 13
+    },
+    {
+      "id": 23260453,
+      "text": "aaas",
+      "amount": 3,
+      "date": 13
     }
   ],
-  "Marzo": [
-    {
-      "id": 4,
-      "text": "Sandwich",
-      "amount": -110
-    }
-  ]
+  "Julio": [],
+  "Agosto": [],
+  "Septiembre": [],
+  "Octubre": [],
+  "Noviembre": [],
+  "Diciembre": []
 }

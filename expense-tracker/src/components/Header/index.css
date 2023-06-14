@@ -1,0 +1,26 @@
+.header {
+  background-color: #6582f8;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: auto;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.header::-webkit-scrollbar {
+  display: none;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: larger;
+}
+
+.date {
+  font-size: small;
+}

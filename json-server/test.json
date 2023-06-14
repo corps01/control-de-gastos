@@ -1,0 +1,38 @@
+{
+    "Enero": [
+        {
+            "id": 1,
+            "text": "Flor",
+            "amount": -20
+        },
+        {
+            "id": 3,
+            "text": "Salario",
+            "amount": 1200
+        },
+        {
+            "id": 88,
+            "text": "Flor",
+            "amount": -20
+        }
+    ],
+    "Febrero": [
+        {
+            "id": 2,
+            "text": "Prestamo",
+            "amount": 100
+        },
+        {
+            "id": 3,
+            "text": "Salario",
+            "amount": 1200
+        }
+    ],
+    "Marzo": [
+        {
+            "id": 4,
+            "text": "Sandwich",
+            "amount": -110
+        }
+    ]
+}
