@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useEffect } from "react";
 import { getCurrentMonthEnEspanol } from "../util/getCurrentDate";
-import AppReducer from "./AppReducer";
+import { AppReducer } from "./AppReducer";
 import axios from "axios";
 
 const initialState = {
@@ -29,7 +29,6 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   const fetchData = async () => {
-    console.log(process.env.REACT_APP_API_ENDPOINT);
     try {
       const response = await axios.get(
         `${process.env.REACT_APP_API_ENDPOINT}/db`
